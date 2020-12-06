@@ -1,0 +1,76 @@
+继承的概念
+
+
+	伪代码
+	
+	class Student{ //学生类
+		//属性私有化
+		private String name ;//姓名
+		private int age ; //年龄
+		private String gender ; //性别
+		
+		//setXXX(xx xx)/getXXX() :公共访问方法
+		
+		public void eat(){
+			..
+		}
+		public void sleep(){
+			..
+		}
+	}	
+	
+	class Worker{
+		//姓名,年龄,性别
+		//属性私有化
+		private String name ;//姓名
+		private int age ; //年龄
+		private String gender ; //性别
+		
+		//setXXX(xx xx)/getXXX() :公共访问方法
+		
+		public void eat(){
+			..
+		}
+		public void sleep(){
+			..
+		}
+	}
+	
+	
+//以后在定义其他类,军人类,工人类,学生类,老师类等等,他们之间有共性内容(姓名,年龄,性别,对外公共访问方法...)
+,将他们共性的内容抽取出来,单独定义在一个独立的类中,让这个独立的类和这多个类产生一种关系: 
+继承关系(extends)
+
+//独立的类:Person
+class Person{
+	
+	//姓名,年龄,性别
+		//属性私有化
+		private String name ;//姓名
+		private int age ; //年龄
+		private String gender ; //性别
+		
+		//setXXX(xx xx)/getXXX() :公共访问方法
+		
+		public void eat(){
+			..
+		}
+		public void sleep(){
+			..
+		}
+}
+
+//学生类
+class Student extends Person{
+	...
+}
+//工人类
+class Worker extends Preson{
+	...
+} 
+
+class Teacher enxtends Person{
+	...
+}
+
+
